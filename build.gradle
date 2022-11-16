@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+}
+
+group 'de.wuespace'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.0'
+    // Jackson
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.14.0'
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.14.0'
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.14.0'
+
+    // Vert.x
+    implementation group: 'io.vertx', name: 'vertx-dependencies', version: '4.2.1'
+    implementation group: 'io.vertx', name: 'vertx-core', version: '4.2.1'
+    implementation group: 'io.vertx', name: 'vertx-web', version: '4.2.1'
+    testImplementation group: 'io.vertx', name: 'vertx-unit', version: '4.2.1'
+    testImplementation group: 'io.vertx', name: 'vertx-junit5', version: '4.2.1'
+    testImplementation group: 'io.vertx', name: 'vertx-web-client', version: '4.2.1'
+}
+
+test {
+    useJUnitPlatform()
+}

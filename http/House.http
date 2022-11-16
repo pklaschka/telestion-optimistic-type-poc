@@ -1,0 +1,16 @@
+POST http://localhost:8080
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "rooms": [
+    {
+      "size": 5,
+      "price": 100
+    },
+    {
+      "size": 10,
+      "price": 200
+    }
+  ]
+}
